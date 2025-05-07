@@ -1,8 +1,8 @@
 <script>
-	import SkillCard from '$lib/components/SkillCard.svelte';
+	import SkillCategoryCard from '$lib/components/SkillCategoryCard.svelte';
 	import WorkOrPlay from '$lib/components/WorkOrPlay.svelte';
 	import kp_name from '$lib/images/NameTag.png';
-	import { skills } from '$lib/utils/skills';
+	import { skillList } from '$lib/utils/skills';
 </script>
 
 <svelte:head>
@@ -21,10 +21,11 @@
 		<img src={kp_name} alt="Kevin Prince Duarte" />
 	</h1>
 
-	<div class="mt-20">
-		<div class="flex gap-4 flex-wrap mx-10 justify-center">
-			{#each skills as skill}
-				<SkillCard {skill}></SkillCard>
+	<div class="">
+		<div class="flex flex-col md:flex-row items-center justify-center">
+			<!-- <div class="flex gap-4 flex-wrap mx-10 justify-center"> -->
+			{#each skillList as skillCategory}
+				<SkillCategoryCard {skillCategory}></SkillCategoryCard>
 			{/each}
 		</div>
 	</div>
