@@ -22,7 +22,7 @@
 	</h1>
 
 	<div class="">
-		<div class="flex items-center justify-center">
+		<div class="flex flex-col md:flex-row items-center justify-center">
 			<!-- <div class="flex gap-4 flex-wrap mx-10 justify-center"> -->
 			{#each skillList as skillCategory}
 				<SkillCategoryCard {skillCategory}></SkillCategoryCard>

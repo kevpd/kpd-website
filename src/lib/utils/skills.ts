@@ -37,7 +37,7 @@ const skillList: SkillCategory[] = [
 				years: 4
 			},
 			{
-				name: 'React Native',
+				name: 'Angular',
 				years: 1
 			}
 		]
@@ -101,6 +101,10 @@ const skillList: SkillCategory[] = [
 			{
 				name: 'Docker',
 				years: 3
+			},
+			{
+				name: 'Jest',
+				years: 2
 			}
 		]
 	}
