@@ -5,14 +5,20 @@
 	import { fly } from 'svelte/transition';
 
 	export let skill: Skill;
+	export let length: number;
+	export let position: number;
+	export let active: boolean;
+	const radius = 120; // radius from center
+
+	const angle = ((2 * Math.PI) / length) * position;
+	const x = Math.round(radius * Math.cos(angle));
+	const y = Math.round(radius * Math.sin(angle));
+
+	const activeStyle = `top: ${50 + x - 20}px; left:${50 + y - 20}px;`;
+	const nonActive = `top: 20px; left: 20px; display:none;`;
 </script>
 
-<div
-	class="px-3 py-2 bg-white text-black flex justify-center rounded-2xl w-auto text-sm"
-	in:fly={{ x: 100, duration: 400, delay: 400 }}
->
-	{skill.name}
-</div>
+<div class="absolute" style={active ? activeStyle : nonActive}>{skill.name}</div>
 
 <style>
 </style>

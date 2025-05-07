@@ -3,7 +3,7 @@
 	import Icon from '@iconify/svelte';
 </script>
 
-<header class="flex items-center justify-center gap-8 my-6">
+<header class="flex items-center justify-center gap-8 mt-6">
 	<div class="corner">
 		<a href="/">
 			<Icon icon="solar:crown-bold-duotone" class="text-5xl" />
